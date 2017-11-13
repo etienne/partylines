@@ -5,7 +5,7 @@ class LinesController < ApplicationController
 
   def show
     @lines = []
-    line = Line.find(params[:id])
+    line = params[:id].nil? ? Line.order("RANDOM()").first : Line.find(params[:id])
     @lines << line
     
     @line = Line.new(parent_id: line.id)
