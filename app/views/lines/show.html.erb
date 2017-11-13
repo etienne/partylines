@@ -1,0 +1,9 @@
+<ul>
+<% @lines.each do |line| %>
+<li><%= line.text %></li>
+<% end %>
+</ul>
+
+<%= render 'form' %>
+
+<%= link_to 'All', lines_path %>

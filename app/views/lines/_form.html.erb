@@ -1,0 +1,11 @@
+<%= form_with model: @line, local: true do |form| %>
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= form.hidden_field :parent_id %><br>
+    <%= form.submit %>
+  </p>
+<% end %>

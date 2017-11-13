@@ -1,0 +1,20 @@
+<h1>Lines</h1>
+ 
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Parent</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @lines.each do |line| %>
+    <tr>
+      <td><%= line.id %></td>
+      <td><%= line.parent_id %></td>
+      <td><%= line.text %></td>
+      <td><%= link_to 'Show', line_path(line) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to 'New', new_line_path %></p>
