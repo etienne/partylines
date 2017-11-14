@@ -1,6 +1,9 @@
 <ul>
 <% @lines.each do |line| %>
-<li><%= line.text %></li>
+  <li>
+    <div class="bubble"><%= line.text %></div>
+    <div class="actions"><%= link_to 'Edit', line %></div>
+  </li>
 <% end %>
 </ul>
 
